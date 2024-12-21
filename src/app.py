@@ -15,3 +15,8 @@ def read_root(data: str, key: str):
     # print('\n'.join(des.steps))
 
     return '\n'.join(des.steps)
+
+
+@app.get("/health")
+def read_root():
+    return "I'm Alive"

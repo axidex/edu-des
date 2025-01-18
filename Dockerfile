@@ -7,7 +7,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y curl && apt-get clean
 
 COPY pyproject.toml poetry.lock /app/
-RUN poetry config virtualenvs.create false && poetry install
+RUN poetry config virtualenvs.create false && poetry install --no-root
 
 COPY . /app/
 
